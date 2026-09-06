@@ -1,6 +1,6 @@
 # Contributors
 
-## Koya Nishio (foxynoxy) - September 2026
+## f0xyn0xy - September 6 2026
 
 ### Testing and Development Tooling Improvements
 
