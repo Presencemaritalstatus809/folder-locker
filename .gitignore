@@ -49,7 +49,10 @@ temp/
 *.backup
 
 # Editors and operating systems
-.vscode/
+.vscode/*
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/tasks.json
 .idea/
 .DS_Store
 Thumbs.db
