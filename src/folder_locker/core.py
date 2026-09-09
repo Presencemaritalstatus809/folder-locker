@@ -30,7 +30,7 @@ from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
 MAGIC_V1 = b"FOLDERLOCK1\n"
 MAGIC_V2 = b"FOLDERLOCK2\n"
 MAGIC = MAGIC_V1
-DEFAULT_CHUNK_SIZE = 1024 * 1024
+DEFAULT_CHUNK_SIZE = 16 * 1024 * 1024
 DEFAULT_ITERATIONS = 600_000
 LOCKED_SUFFIX = ".locked"
 ACL_META_SUFFIX = ".folderlock.json"
